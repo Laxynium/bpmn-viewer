@@ -49,7 +49,7 @@ def upload_file():
                 and len(request.form["activityColumn"]) != 0
                 else "Activity",
             )
-            separator = request.form["separator"]
+            separator = request.form["separator"] if request.form["separator"] and len(request.form["separator"]) != 0 else ","
             xml_file_content = get_xml_file(file_path, dataColumns, separator)
             return {"xml_content": xml_file_content}, 200
         return
