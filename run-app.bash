@@ -1,1 +1,1 @@
-cd server && export FLASK_APP=server.py && flask run
+cd server && export FLASK_APP=server.py && python -m flask run

@@ -2,7 +2,6 @@ import os
 
 import numpy as np
 import pandas as pd
-import pygraphviz as pgv
 from itertools import product
 import copy
 
@@ -497,4 +496,4 @@ def export_xml_file(inMemoryGraph: InMemoryGraph, dir, file_name):
     creator.add_edges(edges)
 
     # layouter.generate_layout(creator.bpmn)    
-    creator.bpmn.export_xml_file(f"{dir}/", f"{file_name}.xml")
+    creator.bpmn.export_xml_file(f"{dir}{os.path.sep}", f"{file_name}.xml")

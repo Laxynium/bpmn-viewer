@@ -5,7 +5,7 @@ from logic.bpmn_builder import DataColumns
 from flask import Flask, request, flash, url_for, json
 from werkzeug.utils import redirect, secure_filename
 
-UPLOAD_FOLDER = "./file_uploads"
+UPLOAD_FOLDER = "file_uploads"
 ALLOWED_EXTENSIONS = {"csv", "xes"}
 app = Flask(__name__, static_url_path="")
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
