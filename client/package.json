@@ -1,0 +1,33 @@
+{
+  "name": "bpmn-visualizer",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack build",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "bpmn-js": "^8.6.1",
+    "bpmn-moddle": "^6.0.0",
+    "diagram-js": "^5.0.0",
+    "lodash": "^4.17.21",
+    "min-dash": "^3.5.2"
+  }
+}

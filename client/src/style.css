@@ -1,0 +1,12 @@
+.hello {
+  color: red;
+}
+body {
+  height: 90vh;
+  width: 90%;
+}
+
+#canvas {
+  height: 80vh;
+  width: 100%;
+}

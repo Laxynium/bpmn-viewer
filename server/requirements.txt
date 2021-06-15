@@ -1,0 +1,5 @@
+Flask==2.0.1
+pygraphviz
+opyenxes
+networkx==1.11rc1
+bpmn_python==0.0.18

@@ -1,0 +1,5 @@
+**/dist
+**/node_modules
+**/server/file_uploads
+**/server/generated_xmls
+**/server/static
