@@ -3,7 +3,6 @@ import os
 import numpy as np
 import pandas as pd
 import pygraphviz as pgv
-from IPython.display import Image, display
 from itertools import product
 import copy
 
@@ -599,6 +598,7 @@ def export_xml_file(inMemoryGraph: InMemoryGraph, dir, file_name):
         )
         for gateway in filter(lambda g: g[1] == "MERGE", inMemoryGraph.xor_gateways)
     ]
+    creator.add_xor_merge_gateways(xor_merge_gateways)
 
     edges = [
         (source, target)
@@ -608,6 +608,6 @@ def export_xml_file(inMemoryGraph: InMemoryGraph, dir, file_name):
     ]
     creator.add_edges(edges)
 
-    # layouter.generate_layout(creator.bpmn)
+    layouter.generate_layout(creator.bpmn)
 
     creator.bpmn.export_xml_file(f"{dir}/", f"{file_name}.xml")
