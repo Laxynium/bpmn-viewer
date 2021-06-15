@@ -3,3 +3,4 @@
 **/server/file_uploads
 **/server/generated_xmls
 **/server/static
+**/__pycache__
