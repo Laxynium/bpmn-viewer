@@ -17,15 +17,9 @@ Do samej prezentacji diagramu BPMN wykoarzystano bibliotekę `https://github.com
 
 ## Opis działania
 Poniżej jest krótkie demo aplikacji:
-<!-- blank line -->
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="images/demp.mp4">
-    <source src="path/to/video.mp4" type="video/mp4">
-    <source src="path/to/video.ogg" type="video/ogg">
-    <source src="path/to/video.webm" type="video/webm">
-  </video>
-</figure>
-<!-- blank line -->
+
+https://user-images.githubusercontent.com/22114978/122016629-804f6080-cdc1-11eb-91e8-1c68e5f0cff5.mp4
+
 
 Jak widać na nim, można wybrać odpowiedni plik i jeżli jest to plik csv pojawiają się dodatkowe pola do wprowadzenia informacji na temat struktury tego pliku. Po kliknięciu przycisku submit na serwer są wysłyane dane z formularza, które następnie są procesowane.
 
