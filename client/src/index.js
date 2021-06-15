@@ -48,10 +48,9 @@ var bpmnViewer = (function () {
 
     reloadView: async function (xml) {
       try {
-        // const layoutedDiagramXML = await this.layouter.layoutProcess(xml);
-        const result = await this.viewer.importXML(xml);
-        // print(result);
-        // console.log("rendered");
+        const layoutedDiagramXML = await this.layouter.layoutProcess(xml);
+        const result = await this.viewer.importXML(layoutedDiagramXML);
+
       } catch (error) {
         console.log("error rendering", error);
       }

@@ -47,10 +47,10 @@ class DataLoading:
                     # print(id,',',activity,",", timestamp)
         return traces
 
-    def get_traces_from_file(file_path, dataColumns: DataColumns):
+    def get_traces_from_file(file_path, dataColumns: DataColumns, separator = ","):
         filename, extension = os.path.splitext(file_path)
         if extension == ".csv":
-            return DataLoading.get_traces_csv(file_path, ",", dataColumns)
+            return DataLoading.get_traces_csv(file_path, separator, dataColumns)
         if extension == ".xes":
             return DataLoading.get_traces_xes(file_path)
 
@@ -608,6 +608,5 @@ def export_xml_file(inMemoryGraph: InMemoryGraph, dir, file_name):
     ]
     creator.add_edges(edges)
 
-    layouter.generate_layout(creator.bpmn)
-
+    # layouter.generate_layout(creator.bpmn)    
     creator.bpmn.export_xml_file(f"{dir}/", f"{file_name}.xml")

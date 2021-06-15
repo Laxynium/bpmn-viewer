@@ -22,8 +22,7 @@ def hello_world():
 
 @app.route("/api/upload", methods=["POST"])
 def upload_file():
-    if request.method == "POST":
-        print(request.files)
+    if request.method == "POST":        
         if "file" not in request.files:
             return {"error": "No file part"}, 400
 
@@ -34,8 +33,7 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
-            print(file_path)
+            file_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)            
             file.save(file_path)
             dataColumns = DataColumns(
                 id_col=request.form["idColumn"]
@@ -51,6 +49,7 @@ def upload_file():
                 and len(request.form["activityColumn"]) != 0
                 else "Activity",
             )
-            xml_file_content = get_xml_file(file_path, dataColumns)
+            separator = request.form["separator"]
+            xml_file_content = get_xml_file(file_path, dataColumns, separator)
             return {"xml_content": xml_file_content}, 200
         return
